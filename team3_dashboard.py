@@ -1584,7 +1584,7 @@ elif page == "모델 결과 분석":
         #     pickle.dump(llm_payload, f)
         # st.write(json.dumps(llm_payload, indent=2)) -- 위 함수의 결과를 streamlit 앱에 출력하는 부분.
         import openai
-        client = openai.OpenAI(api_key="")
+        client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
         prompt = f"""
                 # [역할]
 
@@ -1874,7 +1874,7 @@ elif page == "모델 결과 분석":
         st.pyplot(fig_bee, use_container_width=True)
         
 
-        client = openai.OpenAI(api_key="")
+        client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
         prompt = f"""
                 # [역할]
 
